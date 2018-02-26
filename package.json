@@ -1,0 +1,21 @@
+{
+  "name": "red-rings-path",
+  "version": "1.0.0",
+  "description": "Paths for red-rings",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run build && npm install coffeescript && rm package-lock.json && coffee -c test/*.coffee.md",
+    "build": "npm install coffeescript && rm package-lock.json && coffee -c *.coffee.md",
+    "prepublishOnly": "npm run build",
+    "test": "mocha"
+  },
+  "author": "shimaore",
+  "license": "Unlicense",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.9"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.2.2",
+    "mocha": "^5.0.1"
+  }
+}
